@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 35.5%;
 }
 
 body {
@@ -41,7 +41,7 @@ body {
 /* Main */
 .main {
   position: relative;
-  margin: 10rem auto;
+  margin: 5rem auto;
 }
 
 /* Slider */
@@ -142,7 +142,8 @@ body {
 
 .gallery-2 {
   grid-template-rows: 30rem 25rem;
-  grid-template-areas: "img-2 img-4 img-1 img-1"
+  grid-template-areas:
+  "img-2 img-4 img-1 img-1"
  "img-5 img-5 img-1 img-1";
 }
 
@@ -201,8 +202,14 @@ button {
   cursor: pointer;
   height: 7rem;
   border-right: 2px solid rgba(27, 27, 27, 0.1);
+
+  font-size: 1.8rem;
   text-align: center;
   outline: none;
+}
+
+.btn--quantity-pages:last-child {
+  border-right: none;
 }
 
 /* Post */
@@ -212,10 +219,10 @@ button {
   display: grid;
   grid-template: auto / 1fr 1fr;
   grid-column-gap: 2.5rem;
-  font-size: 1.6rem;
 }
 
 .post__text {
+  font-size: 1.6rem;
   text-indent: 2.5rem;
   margin: 0 0 1rem;
 }
