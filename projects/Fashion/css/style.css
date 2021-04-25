@@ -87,7 +87,6 @@ body {
 
 .img-3 {
   grid-area: img-3;
-  object-position: right top;
 }
 
 .img-4 {
@@ -96,6 +95,7 @@ body {
 
 .img-5 {
   grid-area: img-5;
+  object-position: top;
 }
 
 .img-6 {
@@ -134,22 +134,32 @@ body {
 
 .gallery-1 {
   grid-template-rows: 40rem 40rem 40rem;
-  grid-template-areas: "img-1 img-1 img-2" "img-1 img-1 img-3" "img-4 img-5 img-5";
+  grid-template-areas:
+  "img-1 img-1 img-2"
+  "img-1 img-1 img-3"
+  "img-4 img-5 img-5";
 }
 
 .gallery-2 {
   grid-template-rows: 30rem 25rem;
-  grid-template-areas: "img-2 img-4 img-1 img-1" "img-3 img-3 img-1 img-1";
+  grid-template-areas: "img-2 img-4 img-1 img-1"
+ "img-5 img-5 img-1 img-1";
 }
 
 .gallery-3 {
   grid-template-rows: 30rem 25rem 90rem 2rem;
-  grid-template-areas: "img-2 img-4 img-1  img-1 " "img-3 img-3 img-1  img-1 " "img-6 img-6 text-r text-r" ".     .     text-r text-r";
+  grid-template-areas: "img-2 img-4 img-1  img-1 "
+ "img-5 img-5 img-1  img-1 "
+ "img-6 img-6 text-r text-r"
+ ".     .     text-r text-r";
 }
 
 .gallery-4 {
   grid-template-rows: 3fr 1fr 1fr 1fr;
-  grid-template-areas: "img-1   text-r" "text-l  img-6 " "img-3   img-6 " "img-3   .     ";
+  grid-template-areas: "img-1   text-r"
+ "text-l  img-6 "
+ "img-3   img-6 "
+ "img-3   .     ";
 }
 
 /* Buttons */
