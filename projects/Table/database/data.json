@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 2,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 3,
+    "name": "Samsung S7",
+    "price": "200",
+    "quantity": 4
+  },
+  {
+    "id": 4,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 5,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 6,
+    "name": "Samsung S7",
+    "price": "300",
+    "quantity": 4
+  },
+  {
+    "id": 7,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 8,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 9,
+    "name": "Samsung S7",
+    "price": "300",
+    "quantity": 4
+  },
+  {
+    "id": 10,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 11,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 12,
+    "name": "Samsung S7",
+    "price": "300",
+    "quantity": 4
+  },
+  {
+    "id": 13,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 14,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 15,
+    "name": "Samsung S7",
+    "price": "300",
+    "quantity": 4
+  },
+  {
+    "id": 16,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 17,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 18,
+    "name": "Samsung S7",
+    "price": "300",
+    "quantity": 4
+  },
+  {
+    "id": 19,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 20,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 21,
+    "name": "Samsung S7",
+    "price": "300",
+    "quantity": 4
+  },
+  {
+    "id": 22,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 23,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 24,
+    "name": "Samsung S7",
+    "price": "300",
+    "quantity": 4
+  },
+  {
+    "id": 25,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  },
+  {
+    "id": 26,
+    "name": "XBOX",
+    "price": "300",
+    "quantity": 7
+  },
+  {
+    "id": 27,
+    "name": "Samsung S7",
+    "price": "300",
+    "quantity": 4
+  },
+  {
+    "id": 28,
+    "name": "iPhone 5",
+    "price": "400",
+    "quantity": 5
+  }
+]

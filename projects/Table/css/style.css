@@ -1,0 +1,39 @@
+.container {
+    border: 1px solid rgba(0, 0, 0, .11);
+    ;
+    padding: 10px;
+    width: 525px;
+}
+
+.controls-item {
+    display: inline-block;
+}
+
+.btn {
+    margin: 1px;
+}
+
+.head-btn {
+    background-color: transparent;
+    padding-left: 0;
+
+    position: relative;
+}
+
+
+.head-btn:hover,
+.head-btn:active,
+.head-btn:focus {
+    outline: none;
+}
+
+.head-btn:after {
+    content: '';
+    display: inline-block;
+    margin-left: 2px;
+    width: 10px;
+    height: 10px;
+
+    background: url(../images/sort-arrows.svg) 50% / cover no-repeat;
+
+}
