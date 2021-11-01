@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/vendor/reset.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Портфолио</title>
 </head>
 <body>
@@ -18,10 +19,14 @@
 
           <nav class="header__nav">
             <ul class="nav__list">
-              <li class="nav__item" ><button type="button" class="nav__btn" data-tab="projects">Проекты</button></li>
-              <li class="nav__item"><button type="button" class="nav__btn" data-tab="elements">Элементы</button></li>
+              <!-- <li class="nav__item" ><button type="button" class="nav__btn" data-tab="projects">Проекты</button></li>
+              <li class="nav__item"><button type="button" class="nav__btn" data-tab="elements">Элементы</button></li> -->
+              <!-- <li class="nav__item"><button type="button" class="nav__btn">Обо мне</button></li>
+              <li class="nav__item"><button type="button" class="nav__btn">Портфолио</button></li>
+              <li class="nav__item"><button type="button" class="nav__btn">Навыки</button></li>
+              <li class="nav__item"><button type="button" class="nav__btn">Контакты</button></li> -->
             </ul>
-          </nav>
+          </nav> 
 
         <ul class="contacts">
           <li class="contacts__item">
@@ -65,258 +70,14 @@
     <main class="portfolio">
       <div class="container">
         <h2 class="title">Портфолио</h2>
-        <div class="sibtitle"></div>
-        <p class="subtitle">
-          В моем портфолио пока не много работ, но к каждой работу я стараюсь регулярно совершенствовать, когда узнаю новые
-          методы и инструменты. Список планируемых дополнений к проектам я веду в Trello.
-        </p>
 
-
-        <div class="projects" id="projects">
-
-          <!-- Table -->
-          <div class="project">
-            <img src="images/table.PNG" alt="" srcset="" class="project__img">
-            <div class="project__content">
-              <div class="project__header">
-                <div class="wrapper--tools">
-                  <ul class="tools">
-                    <li class="tools__item">JavaScript</li>
-                    <li class="tools__item">HTML</li>
-                    <li class="tools__item">СSS</li>
-                  </ul>
-                  <ul class="tools">
-                    <li class="tools__item">fetch</li>
-                    <li class="tools__item">paginashion</li>
-                  </ul>
-                </div>
-
-                <div class="project__links">
-                  <a class="project__link" href="projects/Table/index.html" target="_blank">сайт</a>
-                  <a class="project__link" href="https://github.com/ChernovaNV/Table" target="_blank">код</a>
-                </div>
-              </div>
-
-              <h3 class="project__title">Таблица</h3>
-              <p class="project__desc">Таблица на JаvaScript с дополнительными возможностями для пользователя.</p>
-              <h4 class="project__subtitle">Описание и функционал проекта:</h4>
-              <ul class="project__list list--completed">
-                <li>данные для таблицы получены с помощью fetch-запроса;</li>
-                <li>реализована клиентская пагинация с навигацией по страницам;</li>
-                <li>реализована сортировка данных по столбцам по возрастанию (при повторном клике - по убыванию);</li>
-            </div>
-          </div>
-
-          <!-- Fashion -->
-          <div class="project">
-            <img src="images/Fashion.png" alt="" srcset="" class="project__img">
-            <div class="project__content">
-              <div class="project__header">
-                <div class="wrapper--tools">
-                  <ul class="tools">
-                    <li class="tools__item">HTML</li>
-                    <li class="tools__item">SСSS</li>
-                    <li class="tools__item">Grid</li>
-                    <li class="tools__item">JavaScript</li>
-                    <li class="tools__item">BEM-naming</li>
-                  </ul>
-                  <ul class="tools">
-                    <li class="tools__item">Семантическая разметка</li>
-                  </ul>
-                </div>
-
-                <div class="project__links">
-                  <a class="project__link" href="projects/Fashion/index.html" target="_blank">сайт</a>
-                  <a class="project__link" href="https://github.com/ChernovaNV/Fashion" target="_blank">код</a>
-                </div>
-              </div>
-
-              <h3 class="project__title">Fashion</h3>
-              <p class="project__desc">Проект журнала, написанный на css grid. Первоначальной целью проекта я ставила перед собой
-                - практика css
-                grid, и проект должен был быть одностраничным журналом с прокруткой к следующей странице, но в процессе работы я
-                решила,
-                что интереснее будет реализовать его с возможностью перелистывания страниц, для создания ощущения чтения
-                настоящего
-                журнала. Для этого при помощи JavaScript было реализовано перелистывание при нажатии на кнопки, а также
-                возможность выбора пользователем количества страниц, отображаемых на экране, в зависимости от размеров
-                экрана.</p>
-              <p class="project__desc">Планируется добавить:</p>
-              <ul class="project__list list--plans">
-                <li>невозможность выбора количества страниц на экране для мобильных устройств и ограничение выбора на устройствах
-                  с небольшим экраном</li>
-                <li>адаптив под мобильные устройства и планшеты</li>
-                <li>эффект перелистывания страниц</li>
-                <li>нумерацию страниц и возможность перейти на любую страницу.</li>
-              </ul>
-
-            </div>
-          </div>
-
-          <!-- Anne Sweet -->
-          <div class="project">
-            <img src="images/AnneSweet.png" alt="" srcset="" class="project__img">
-            <div class="project__content">
-              <div class="project__header">
-                <div class="wrapper--tools">
-                  <ul class="tools">
-                    <li class="tools__item">HTML</li>
-                    <li class="tools__item">SCSS</li>
-                    <li class="tools__item">Flexbox</li>
-                    <li class="tools__item">BEM-naming</li>
-                    <li class="tools__item">JavaScript</li>
-                  </ul>
-                  <ul class="tools">
-                    <li class="tools__item">Семантическая разметка</li>
-                  </ul>
-                </div>
-
-                <div class="project__links">
-                  <a class="project__link" href="projects/AnneSweet/index.html" target="_blank">сайт</a>
-                  <a class="project__link" href="https://github.com/ChernovaNV/Anne-Sweet" target="_blank">код</a>
-                </div>
-              </div>
-
-              <h3 class="project__title">Anne Sweet</h3>
-              <h4 class="project__subtitle">Страницы проекта:</h4>
-              <h4 class="project__desc">Главная страница, страница статьи (Примечание: все ccылки в "шапке" ведут на одну страницу
-                статьи.).
-                <h4 class="project__subtitle">Описание и особенности проекта:</h4>
-                <p class="project__desc">Проект написан на HTML и препроцессоре
-                  SASS. Особенностью проекта для меня на тот момент было первое использование JavaScript и максимально
-                  симантичиная разметка, добавление анимации при наведении на элементы. На JаvaScript было
-                  реализовано:</p>
-                <ul class="project__list list--completed">
-                  <li>изменение поля формы, если текст не соответствует требованиям (менее 20 символов или более 200);</li>
-                  <li>добавление единицы к счетчику "лайков" при клике на "лайк" и убавление при вовторном нажатии (на странице
-                    статьи);</li>
-                  <li>добавление нового комментария (на странице статьи);</li>
-                </ul>
-                <h4 class="project__subtitle">В v.2.0. было добавлено:</h4>
-                <ul class="project__list list--completed">
-                  <li>фильтр статей по тегам (на главной странице);</li>
-                  <li>изменение двух последних статей в разделе "Все статьи" на всю ширину контейнера;</li>
-                  <li>с помощью JavaScript добавление статей и элементов портфолио, при клике на кнопку "Показать еще";</li>
-                  <li>скрытие кнопки "Показать еще" при отсутствии новых элементов;</li>
-                  <li>исправлен баг предыдущей версии на странице статьи - при введении неполного адреса эл. почты и смены фокуса
-                    на другое
-                    поле надпись "Почта" возвращалась вниз и перекрывала текст. Решение: через JavaScript добавлена проверка
-                    введения в
-                    поле хотя бы 1 символа.</li>
-                </ul>
-                <p class="project__subtitle">Проблемы, возникшие при работе над проектом и их решение:</p>
-                <p class="project__desc">После изменения фильтра "Все статьи" на более симантичный вариант (select) возникла
-                  проблема "кликабельности" и
-                  изменение вида кастомной стрелки. Два найденных варианта решали только одну проблему: (1) при добавлении
-                  дизайнерской стрелки к обертке select варианты не появлялись при клике на стрелку, но изменение положения
-                  стрелки можно было применить через стили, (2) при добавлении стрелки через background-image к select решалась
-                  проблема кликабельности, но было невозможно
-                  изменение положения стрелки через стили.
-                  Решение: использовала 2 вариант, а изменение положения реализовала на JavaScript.</p>
-                <p class="project__desc">В дизайне использовано интересное оформление последних двух видимых статьей, однако при
-                  добавлении скрытых элементов для последующего добавления на страницу, через css не удавалось стилизовать их по
-                  дизайн-проекту. Решение: при клике на кнопку "посмотреть еще" удаление особого класса у последним двух видимых
-                  элементов и добавлении его снова к последнему или последним двум статьям с помощью JavaScript.</p>
-                <p class="project__desc">Решение предыдущей проблемы создало новую - элемент оставался большим даже если в фильтре
-                  оставалась только одна статья,
-                  которая ранее была одной из последних. Решение: изменение функции сортировки. Примечание: решение получилось
-                  рабочим,
-                  но громозским, и я буду стараться найти более лаконичный варинт решение данной проблемы.</p>
-                <h4 class="project__subtitle">В работе:</h4>
-                <ul class="project__list list--plans">
-                  <li>добавление адаптива.</li>
-                </ul>
-            </div>
-          </div>
-
-          <!-- Minimo -->
-          <div class="project">
-            <img src="images/Minimo.png" alt="" srcset="" class="project__img">
-            <div class="project__content">
-              <div class="project__header">
-                <div class="wrapper--tools">
-                  <ul class="tools">
-                    <li class="tools__item">HTML</li>
-                    <li class="tools__item">CSS</li>
-                    <li class="tools__item">SASS</li>
-                    <li class="tools__item">Flexbox</li>
-                    <li class="tools__item">BEM-naming</li>
-                    <li class="tools__item">JavaScript</li>
-                  </ul>
-                  <ul class="tools">
-                    <li class="tools__item">Адаптив</li>
-                    <li class="tools__item">Семантическая разметка</li>
-                  </ul>
-                </div>
-
-                <div class="project__links">
-                  <a class="project__link" href="projects/Minimo/index.html" target="_blank">сайт</a>
-                  <a class="project__link" href="https://github.com/ChernovaNV/Minimo" target="_blank">код</a>
-                </div>
-              </div>
-
-              <h3 class="project__title">Minimo (блог)</h3>
-              <h4 class="project__subtitle">Страницы проекта:</h4>
-              <p class="project__desc">Главная страница, страница статьи (Примечание: все ccылки в "шапке" ведут на одну страницу
-                статьи.).
-              <h4 class="project__subtitle">Функционал и особенности проекта:</h4>
-              <p class="project__desc">В <span class="project__subtitle">v.1.0 </span> проект был написан на HTML и CSS, с
-                использованием Flexbox, единицы измерения - px.</p>
-              <p class="project__desc">В <span class="project__subtitle">v.2.0</span> проект был переписан на на препроцессоре
-                SASS/SCSS с использование BEM-naming.</p>
-              <p class="project__desc">В <span class="project__subtitle">v.3.0</span> в проект был добавлен адаптив (с помощью
-                media-запросов), бургер-меню на мобильных устройствах и
-                планшетах, зафиксирована "шапка" при прокрутке страницы, на JаvaScript было реализовано:</p>
-              <ul class="project__list list--completed">
-                <li>изменение вида кнопки бургер меню;</li>
-                <li>появление/закрытие меню на мобильных устройствах и планшетах при нажатии на бургер-меню;</li>
-                <li>добавление новых статей при нажатии на кнопку "Load more" на главной странице;</li>
-                <li>скрытие кнопки "Load more" при отсутствии статей к добавлению.</li>
-              </ul>
-              <p class="project__desc">Остальные элементы, разметка и стили не был изменены.</p>
-
-            </div>
-          </div>
-        </div><!-- /.projects -->
-
-
-        <div class="elements" id="elements">
-
-          <!-- Gallery -->
-          <div class="element">
-            <img src="images/Gallery.png" alt="" srcset="" class="element__img">
-            <div class="project__content">
-                <div class="project__links">
-                  <a class="project__link" href="elements/Gallery/index.html" target="_blank">сайт</a>
-                  <a class="project__link" href="https://github.com/ChernovaNV/Gallery" target="_blank">код</a>
-                </div>
-
-              <h3 class="project__title">Галерея (CSS GRID)</h3>
-              <p class="project__desc">Небольшая адаптивная галерея на CSS Grid с возможностью перелистывания фотографий, реализованная с помощью подключения плагина Magnific popup (jQuery)</p>
-            </div>
-          </div>
-
-          <!-- Select -->
-          <div class="element">
-            <img src="images/select.png" alt="" srcset="" class="element__img">
-            <div class="project__content">
-              <div class="project__links">
-                <a class="project__link" href="elements/Select/index.html" target="_blank">сайт</a>
-                <a class="project__link" href="https://github.com/ChernovaNV/Select-JS" target="_blank">код</a>
-              </div>
-            </div>
-
-            <h3 class="project__title">Select (JavaScript)</h3>
-            <p class="project__desc">Небольшая адаптивная галерея на CSS-Grid с возможностью перелистывания фотографий,
-              реализованная с помощью подключения плагина Magnific popup (jQuery)</p>
-          </div>
-
-        </div><!-- /.elements -->
+        <div class="projects" id="projects"></div>
+        <!-- /.projects -->
 
       </div>
     </main>
   </div>
 
-  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

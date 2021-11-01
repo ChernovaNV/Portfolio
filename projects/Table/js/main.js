@@ -1,4 +1,4 @@
-const requestURL = './database/data.json';
+const requestURL = '../database/data.json';
 const tableBody = document.getElementById('table-body');
 const tableHead = document.getElementById('table-head');
 const wrapper = document.getElementById('pagination-wrapper');
