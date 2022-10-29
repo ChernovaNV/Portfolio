@@ -19,7 +19,7 @@ var PROJECTS = [{
   img: 'images/Rent of vehicles.png',
   tools: ['React', 'Redux', 'TypeScript','React Router', 'SCSS', 'BEM-naming'],
   properties: ['семантическая разметка', 'адаптив', 'кроссбраузерность'],
-  linkSite: 'projects/Vehicles-rent/index.html',
+  linkSite: 'https://chernovanv.github.io/React-Vehicles-Rent/',
   linkCode: 'https://github.com/ChernovaNV/React-Vehicles-Rent',
   descs: [{
     subtitle: 'Описание и особенности проекта:',
