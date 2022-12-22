@@ -1,6 +1,6 @@
 "use strict";
 
-var PROJECTS = [{
+const PROJECTS = [{
   name: 'Приложение погоды',
   img: 'images/WeatherApp.png',
   tools: ['React Native', 'Expo'],
@@ -12,7 +12,7 @@ var PROJECTS = [{
     desc: 'Приложение, показывающее актуальную погоду в одном из двух городов (Омск, Петропавловск-Комчатский)'
   }, {
     subtitle: 'Функционал:',
-    listComplite: ['данные о погоде загружаются c помощью axios с api.openweathermap.org;', 'изменение города между Омском и Петропавловкс-Комчатским при нажатии на кнопку «Сменить город»;', 'обновление температуры при изменении температурной шкалы;', 'задний фон и изображение погоды изменяются в зависимости от текущей погоды;', 'при загрузке страницы в зависимости от ширины экрана пользователя устанавливаются значения размеров.']
+    listComplite: ['данные о погоде загружаются c помощью axios с api.openweathermap.org;', 'изменение города между Омском и Петропавловск-Комчатским при нажатии на кнопку «Сменить город»;', 'обновление температуры при изменении температурной шкалы;', 'задний фон и изображение погоды изменяются в зависимости от текущей погоды;', 'при загрузке страницы в зависимости от ширины экрана пользователя устанавливаются значения размеров.']
   }]
 }, {
   name: 'Сайт аренды транспортного средства (Pepelane)',
@@ -99,69 +99,131 @@ var PROJECTS = [{
     listComplite: ['изменение вида кнопки бургер меню;', 'появление/закрытие меню на мобильных устройствах и планшетах при нажатии на бургер-меню;', 'добавление новых статей при нажатии на кнопку "Load more" на главной странице;', 'скрытие кнопки "Load more" при отсутствии статей к добавлению.']
   }]
 }];
-"use strict";
-"use strict";
 
-/* Показать контакты */
-var contactsBtn = document.querySelector('.contacts__btn'),
-    contactsContent = document.querySelector('.contacts__content');
+
+/* Показать меню */
+const menu = document.querySelector('.contacts');
+
+const menuItems = menu.querySelectorAll('.contacts__item');
+const menuBtn = menu.querySelector('.burger');
+
+let activeMenu = false;
+const lengthItemsMenu = menuItems.length;
+const radiusMenu = 100;
+
+/* Функция скрытия элементов меню */
+function menuClose() {
+  menuBtn.classList.remove('burger__active');
+  menu.classList.remove('contacts__active--mobile')
+
+  for(let i = 0; i < lengthItemsMenu; i++) {
+    menuItems[i]. removeAttribute('style');
+  }
+}
+/* Событие - бургер-меню */
+menuBtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  
+  activeMenu = !activeMenu;
+  contactsContent.classList.remove('active')
+
+  if(activeMenu) {
+    menuBtn.classList.add('burger__active');
+    
+    for(let i = 0; i < lengthItemsMenu; i++) {
+      const angle = i * (Math.PI / 6);
+
+      const x = radiusMenu * Math.sin(angle);
+      const y = radiusMenu * Math.cos(angle);
+
+      console.log('angle: ', angle);
+      console.log('x: ', x);
+      console.log('y: ', y);
+
+      menuItems[i].style.left = x + 'px';
+      menuItems[i].style.bottom = y + 'px';
+  } 
+  } else {
+    menuClose();
+  }
+})
+ /* Событие - контакты */
+const contactsBtn = document.querySelector('.contacts__btn');
+const contactsContent = document.querySelector('.contacts__content');
+
 contactsBtn.addEventListener('click', function () {
   contactsContent.classList.toggle('active');
+
+  activeMenu = false;
+  menuClose();
 });
 /* Показать вкладки */
 
-var navList = document.querySelector('.nav__list');
-navList.addEventListener('click', function (e) {
-  var id = e.target.dataset.tab;
-  var navBtns = navList.querySelectorAll('.nav__btn');
-  navBtns.forEach(function (btn) {
-    var btnId = btn.dataset.tab;
-    document.getElementById(btnId).style.display = "none";
-  });
-  document.getElementById(id).style.display = "flex";
-}); // создание проектов на странице
+// const navList = document.querySelector('.nav__list');
+// navList.addEventListener('click', function (e) {
+//   let id = e.target.dataset.tab;
+//   const navBtns = navList.querySelectorAll('.nav__btn');
+//   navBtns.forEach(function (btn) {
+//     let btnId = btn.dataset.tab;
+//     document.getElementById(btnId).style.display = "none";
+//   });
+//   document.getElementById(id).style.display = "flex";
+// }); // создание проектов на странице
 
-var projectContainer = document.querySelector('.projects'); //копирование каталога
+const projectContainer = document.querySelector('.projects'); //копирование каталога
 
-var projects = JSON.parse(JSON.stringify(PROJECTS));
-
+let projects = JSON.parse(JSON.stringify(PROJECTS));
+/* Функция создания списка инструментов */
 function tagsList(list) {
-  var tools = [];
+  let tools = [];
   list.forEach(function (item) {
-    tools += "<li class=\"list__item\">".concat(item, "</li>");
+    tools += `<li class="list__item">${item}</li>`;
   });
   return tools;
 }
 
 ;
-
+/* Функция создания описания функционала/планов по проекту */
 function desc(projectItem) {
-  var descs = [];
+  let descs = [];
   projectItem.descs.forEach(function (descItem) {
     if (descItem.subtitle !== undefined) {
-      descs += "<h4 class=\"project__subtitle\">".concat(descItem.subtitle, "</h4>");
+      descs += `<h4 class="project__subtitle">${descItem.subtitle}</h4>`;
     }
 
     if (descItem.desc !== undefined) {
-      descs += "<p class=\"project__desc\">".concat(descItem.desc, "</p>");
+      descs += `<p class="project__desc">${descItem.desc}</p>`;
     }
 
     if (descItem.listComplite !== undefined) {
-      var li = [];
-      var ul = '';
+      let li = [];
+      let ul = '';
       descItem.listComplite.forEach(function (item) {
-        li += "<li>".concat(item, "</li>");
+        li += `<li>${item}</li>`;
       });
-      ul = "\n        <ul class=\"project__list list--completed\">\n          ".concat(li, "\n        </ul>\n      ");
+      ul = `<ul class="project__list list--completed">${li}</ul>`;
       descs += ul;
     }
   });
   return descs;
 }
-
+/* Функция создания описания проекта */
 function projetsBuild() {
   projects.forEach(function (projectItem) {
-    projectContainer.innerHTML += "\n    <div class=\"project\">\n      <img src=\"".concat(projectItem.img, "\" alt=\"\u0424\u043E\u0442\u043E \u043F\u0440\u043E\u0435\u043A\u0442\u0430\"  class=\"project__img\">\n      <div class=\"project__content\">\n        <div class=\"project__header\">\n          <div class=\"wrapper--list\">\n            <ul class=\"list\"> ").concat(tagsList(projectItem.tools), "</ul>\n            <ul class=\"list list--second\">").concat(tagsList(projectItem.properties), "</ul>\n          </div>\n          <div class=\"project__links\">\n            <a class=\"project__link\" href=\"").concat(projectItem.linkSite, "\" target=\"_blank\">\u0441\u0430\u0439\u0442</a>\n            <a class=\"project__link\" href=\"").concat(projectItem.linkCode, "\" target=\"_blank\">\u043A\u043E\u0434</a>\n          </div>\n        </div>\n\n          <h3 class=\"project__title\">").concat(projectItem.name, "</h3>\n          ").concat(desc(projectItem), "\n\n      </div>\n    </div>\n  ");
+    projectContainer.innerHTML += `
+      <div class="project">
+        <img src="${projectItem.img}" alt="Фото проекта"  class="project__img">                 
+        <div class="project__links">           
+          <a class="project__link" href="${projectItem.linkSite}" target="_blank">сайт</a>
+          <a class="project__link" href="${projectItem.linkCode}" target="_blank">код</a>   
+        </div>                 
+        <ul class="list"> ${tagsList(projectItem.tools)}</ul>          
+        <ul class="list list--second">${tagsList(projectItem.properties)}</ul>            
+        <h3 class="project__title">${projectItem.name}</h3>          
+        ${desc(projectItem)}      
+        </div>   
+      </div> 
+    `
   });
 }
 
