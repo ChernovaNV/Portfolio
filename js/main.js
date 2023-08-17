@@ -18,7 +18,7 @@ const PROJECTS = [{
   name: 'Сайт аренды транспортного средства (Pepelane)',
   img: 'images/Rent of vehicles.png',
   tools: ['React', 'Redux', 'TypeScript','React Router', 'SCSS', 'BEM-naming'],
-  properties: ['семантическая разметка', 'адаптив', 'кроссбраузерность'],
+  properties: ['Feature Sliced Design', 'адаптив', 'кроссбраузерность'],
   linkSite: 'https://chernovanv.github.io/React-Vehicles-Rent/',
   linkCode: 'https://github.com/ChernovaNV/React-Vehicles-Rent',
   descs: [{
